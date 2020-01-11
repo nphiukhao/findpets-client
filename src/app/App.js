@@ -12,11 +12,11 @@ class App extends React.Component {
   render() {
     return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <nav>
           <Link to='/'>Petful Adoption Service</Link>
         </nav>
-      </header>
+      </header> */}
       <main className="main">
         <Switch>
           <Route exact path='/' component={LandingPage}></Route>
