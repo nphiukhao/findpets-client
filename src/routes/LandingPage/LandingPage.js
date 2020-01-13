@@ -32,6 +32,7 @@ class LandingPage extends React.Component {
             As this shelter runs on a first in first out adoption policy, there is no browsing of animals. In order to make sure all animals get a deserving home, animals that have been with us the longest are up for adoption first.
           </p>
           <p><span className='start'>To start: </span> Place yourself in the adoption queue by entering your <span className='name'>name</span> below. Then wait until your name is at the top of the queue to adopt our next dog or cat.</p>
+          <p><span className='start'>To adopt more: </span> Simply re-enter your name into the queue or click the <span className='link'>Find Pets <FontAwesomeIcon className='paw-icon' aria-label='paw-icon' icon={faPaw} size="1x" color=" #F0A74D"/></span> button on the adoptions page.</p>
         </div>
 
         <form action='#' id='js-user-form' onSubmit={(e) => this.handleSubmit(e)}>
