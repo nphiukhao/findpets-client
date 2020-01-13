@@ -1,6 +1,6 @@
 # Find Pets Adoption App
 
-Find Pets adoption is a first come first serve pet adoptation app. Users create an account, and will be placed in a line. Adoptation listings are populated one at a time, when users are at the front of the line, they will only able to select either the next cat or dog.
+Find Pets adoption is a first come first serve pet adoptation app. Users can enter their name and be placed in an adoptions queue. When users are at the top of the queue, they can either choose to adopt a cat or a dog. This app was built with the intention of making sure the animals that have been at the shelter the longest, gets a home first. Therefore, users can't browse through the animals. Users also can't adopt when it's not their turn.
 
 ## Details
 
