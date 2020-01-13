@@ -14,6 +14,7 @@ class AdoptionPage extends React.Component {
     cat: {},
     recentlyAdopted: [],
     intervalId: null,
+    showFeedback: false
   }
 
   async componentDidMount() {
@@ -26,7 +27,6 @@ class AdoptionPage extends React.Component {
     const intervalId = setInterval(() => {
       this.adopt('dog');
     }, 10000) //once the page is loading start the adpotion dog timer
-
     this.setState({
       users: users.adoptorsLine,
       dog: dog.dog,
@@ -67,7 +67,6 @@ class AdoptionPage extends React.Component {
     const name = JSON.parse(userObj).name;
   
     if (this.state.users[0] === name) {
-
       clearInterval(this.state.intervalId)
     }
   }
@@ -117,12 +116,10 @@ class AdoptionPage extends React.Component {
     // console.log('checking user')
     const userObj = localStorage.getItem('petful-user');
     const name = JSON.parse(userObj).name;
-    // console.log(this.state.users[0], name)
     if (this.state.users.length) {
       return this.state.users[0] !== name
     }
     else return false
-
   }
 
   render() {
@@ -157,7 +154,7 @@ class AdoptionPage extends React.Component {
           </div>
 
           <div className='recently-adopted'>
-                      <h4>Recently Adopted: </h4>
+            <h4>Recently Adopted: </h4>
             <div className='adopted-wrapper'>
               {this.renderRecentlyAdopted()}
             </div>
