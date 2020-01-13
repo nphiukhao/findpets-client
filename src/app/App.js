@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import LandingPage from '../routes/LandingPage/LandingPage';
 import AdoptionPage from '../routes/AdoptionPage/AdoptionPage';
 import ErrorPage from '../routes/ErrorPage/ErrorPage';
@@ -12,11 +12,6 @@ class App extends React.Component {
   render() {
     return (
     <div className="App">
-      {/* <header className="App-header">
-        <nav>
-          <Link to='/'>Petful Adoption Service</Link>
-        </nav>
-      </header> */}
       <main className="main">
         <Switch>
           <Route exact path='/' component={LandingPage}></Route>

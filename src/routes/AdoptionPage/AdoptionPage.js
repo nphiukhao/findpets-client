@@ -1,5 +1,9 @@
 import React from 'react';
 import PetfulApiService from '../../services/petful-api-service';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPaw } from '@fortawesome/free-solid-svg-icons'
+
 import './AdoptionPage.css';
 
 
@@ -32,7 +36,6 @@ class AdoptionPage extends React.Component {
   }
 
   async componentDidUpdate(prevProps, prevState) {
-    // console.log('in componeneDidUpdate')
     if (prevState.users.length !== 0 && this.state.users.length === 0) {
       const newUsers = await PetfulApiService.refreshUsers();
       this.setState({ users: newUsers })
@@ -127,29 +130,37 @@ class AdoptionPage extends React.Component {
     const { users, dog, cat } = this.state;
     return (
       <section className='adoptions-page'>
-        <div className='users'>
-          <h4>User Line:</h4>
-          {this.renderUsers(users)}
-        </div>
+        <header className="App-header">
+          <nav>
+            <Link style={{ textDecoration: 'none' }} to='/'>Find Pets <FontAwesomeIcon className='paw-icon' aria-label='paw-icon' icon={faPaw} size="1x" color=" #F0A74D"/></Link>
+          </nav>
+        </header>
 
-        <div className='animals'>
-          <h2>Up Next to Adopt: </h2>
-          <div className='animal-wrapper'>
-            <div className='dog-queue'>
-              {this.renderDog(dog)}
-              <button className='button primary' onClick={() => this.adopt('dog')} disabled={this.allowedToAdopt()} >Adopt</button>
-            </div>
-            <div className='cat-queue'>
-              {this.renderCat(cat)}
-              <button className='button primary' onClick={() => this.adopt('cat')} disabled={this.allowedToAdopt()} >Adopt</button>
+        <div className='adoption-body'>
+          <div className='users'>
+            <h4>Current Queue:</h4>
+            {this.renderUsers(users)}
+          </div>
+
+          <div className='animals'>
+            <h2>Up Next to Adopt: </h2>
+            <div className='animal-wrapper'>
+              <div className='dog-queue'>
+                {this.renderDog(dog)}
+                <button className='button primary' onClick={() => this.adopt('dog')} disabled={this.allowedToAdopt()} >Adopt</button>
+              </div>
+              <div className='cat-queue'>
+                {this.renderCat(cat)}
+                <button className='button primary' onClick={() => this.adopt('cat')} disabled={this.allowedToAdopt()} >Adopt</button>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className='recently-adopted'>
-                    <h4>Recently Adopted: </h4>
-          <div className='adopted-wrapper'>
-            {this.renderRecentlyAdopted()}
+          <div className='recently-adopted'>
+                      <h4>Recently Adopted: </h4>
+            <div className='adopted-wrapper'>
+              {this.renderRecentlyAdopted()}
+            </div>
           </div>
         </div>
       </section>

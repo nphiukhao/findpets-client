@@ -1,6 +1,6 @@
-# Petful Adoption Client App
+# Find Pets Adoption App
 
-Petful adoption is a first come first serve pet adoptation app. Users create an account, and will be placed in a line. Adoptation listings are populated one at a time, when users are at the front of the line, they will only able to select either the next cat or dog.
+Find Pets adoption is a first come first serve pet adoptation app. Users create an account, and will be placed in a line. Adoptation listings are populated one at a time, when users are at the front of the line, they will only able to select either the next cat or dog.
 
 ## Details
 
