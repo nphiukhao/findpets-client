@@ -13,7 +13,7 @@ font-family: 'Caveat', cursive; //for the animals info
 }
 
 .App-header {
-  background-color: #3691a8;
+  background-color: #016685;
   height: 65px;
   display: flex;
   flex-direction: column;
@@ -36,7 +36,7 @@ font-family: 'Caveat', cursive; //for the animals info
   padding-left: 20px;
 }
 .users, .recently-adopted {
-  color: #3f3f3f;
+  color: #4D4D4D;
   font-family: "Josefin Sans", sans-serif;
 }
 
@@ -84,9 +84,6 @@ font-family: 'Caveat', cursive; //for the animals info
   /* background-color: white; */
 }
 
-.animals > h2 {
-  /* margin-left: 18px; */
-}
 
 .animal-wrapper {
   display: flex;
@@ -99,23 +96,23 @@ font-family: 'Caveat', cursive; //for the animals info
 .animal > p {
   font-weight: 600;
   margin: 10px 0;
-  color: #3f3f3f;
+  color: #4D4D4D;
 }
 .animal > h3 {
   margin: 10px 0;
-  color: #3f3f3f;
+  color: #4D4D4D;
   font-size: 30px;
 }
 .animal-wrapper button {
   width: 100px;
-  background-color: #3f3f3f;
+  background-color: #4D4D4D;
   padding: 5px 5px;
   color: #f0a74d;
 }
 
 .animal-wrapper button:hover {
   background-color: #3691a8;
-  color:  #3f3f3f;
+  color:  #4D4D4D;
 }
 
 .responsive {
@@ -179,10 +176,35 @@ font-family: 'Caveat', cursive; //for the animals info
     width: 300px;
   }
   .animals {
-    background: rgba(255, 255, 255, 0.3);
+    background: #016685;
     padding-top: 25px;
   }
   .animals > h2 {
-    color:#3691a8;
+    color:#f0a74d;
   }
+
+  .animal > p {
+    font-weight: 600;
+    margin: 10px 0;
+    color: white;
+  }
+  .animal > h3 {
+    margin: 10px 0;
+    color: white;
+    font-size: 30px;
+  }
+
+  .animal-wrapper button {
+    width: 100px;
+    background-color: #f0a74d;
+    padding: 5px 5px;
+    color: #4D4D4D;
+  }
+  
+  .animal-wrapper button:hover {
+    background-color: #016685;
+    color:  white;
+  }
+
+  
 }
